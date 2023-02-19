@@ -2,6 +2,12 @@ output "cluster_endpoint" {
   description = "Endpoint for EKS control plane."
   value       = module.eks.cluster_endpoint
 }
+      
+
+output "eks_cluster_id" {
+  description = "Endpoint for EKS control plane."
+  value       = module.eks.cluster_id
+}
 
 output "cluster_security_group_id" {
   description = "Security group ids attached to the cluster control plane."
@@ -18,7 +24,7 @@ output "config_map_aws_auth" {
   value       = module.eks.config_map_aws_auth
 }
 
-output "region" {
+output "region" {   
   description = "AWS region"
   value       = var.region
 }
